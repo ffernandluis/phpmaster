@@ -51,4 +51,28 @@ echo '<br><br><br>';
 
 //Viendo como se muestra en el navegador
 var_dump($alumnos);
+
+
+$alumnos = array(
+    array(
+        'nombre'=>'Juan',
+        'edad'=> 20,
+        'pais'=> 'Mexico'
+    ), #fila 1 
+    array(
+        'nombre'=>'Jose',
+        'edad'=> 22,
+        'pais'=> 'Bolivia'
+    ), #fila 2 
+    array(
+        'nombre'=>'Maria',
+        'edad'=> 18,
+        'pais'=> 'Argentina'
+    ) #fila 3 
+);
+//ahora si queremos agregar un valor
+
+$alumnos[1]['calificacion']= 10;
+
+var_dump($alumnos);
 ?>
