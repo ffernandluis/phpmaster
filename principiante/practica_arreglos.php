@@ -67,6 +67,7 @@ $datos = array(
         array(0,2,2)
     )
 );
+// Recorriendo el array tridimensional
 
 foreach($datos as $datos2){
     foreach($datos2 as $datos3){
