@@ -8,8 +8,6 @@ echo "Esto tambien es un saludo\n";
 
 echo "Hola","mundo";
 
-echo "<h1>Hola a todos </h1>";
-
 /*
  Hay dos formas de ver este codigo
  una es por el navegador
