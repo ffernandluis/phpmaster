@@ -9,20 +9,28 @@
 <body>
     <?php
     
-    define('INC','/includes/');
-    require_once __DIR__.INC.'curso.inc.php'; //establece que el codigo del la ruta es obligatorio
+    require_once __DIR__.'/includes/global.inc.php'; //establece que el codigo del la ruta es obligatorio
 
-    $curso1 = new Curso('POO en PHP','Yesi Days','3 sesiones', 10, true );
+    #instanciar  un estudiante
+    $estudiante = new Estudiante('Yesi','Days','silvercorp@gmail.com');#nombra vacio para probar el try catch
 
-    $curso2 = new Curso('Javascript desde 0','Alvaro Felipe','6 sesiones', 0, true );
-    
-    echo $curso1->obtnerTitulo().'<br>';
-    echo $curso1->obtenerProfesor().'<br>';
+    //var_dump($estudiante);
+    echo '<p>'.$estudiante->bienvenida().'</p>';
+    echo '<p>'.$estudiante->despedida().'</p>';
+    echo '<p>'.$estudiante->validarCompra().'</p>';
 
-    $curso1->asignarTitulo('Nuevo Titulo del Curso'); // asiendo asignacion de un nuevo titulo por medio de encapsulamiento atraves de un setter
+    echo "<br>";
+    echo $estudiante::MONEDA; 
 
-    echo $curso1->obtnerTitulo();
+    #instanciar un profesor
 
+    $profesor = new Profesor('Jon','Mircha','jonmircha@gmail.com');
+
+    //var_dump($profesor);
+    echo '<p>'.$profesor->bienvenida().'</p>';
+    echo '<p>'.$profesor->despedida().'</p>';
+    echo "<br>";
+    echo $profesor::MONEDA; 
     ?>
 </body>
 </html>
